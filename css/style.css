@@ -95,7 +95,9 @@ section p, section ul{
     background-color: #fff;
     padding: 1.0rem;
 }
-section .warning{
+.warning{
     color: #e74c3c;
     line-height: 3.5rem;
+    text-align: center;
+    margin-top: 3rem;
 }
