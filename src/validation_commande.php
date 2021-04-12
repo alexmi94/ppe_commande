@@ -35,7 +35,7 @@
         <p>Total HT :  <?php print $prix_total_ht; ?></p>
         <p>+ Tva <?php print $tva."% = ".$prix_tva."&euro;";?></p>
         <p>Le prix total de votre commande est de : <?php print $prix_total_ttc; ?>&euro;</p>
-        <p>Adresse : <?php print $_SESSION["address"] ?></p>
+        <p>Adresse : <?php print $_SESSION["adresse"] ?></p>
     </section>
 </main>
 <?php

@@ -12,15 +12,15 @@
   </header>
 <main>
 <?php
-#address
+#adresse
   if(isset($_POST["send"])){
     if(!empty($_POST["tablettes"]) && !empty($_POST["pc"]) && !empty($_POST["portable"])){
-      if(preg_match('#[0-9][a-z][A-Z]#', $_POST["address"])){
+      if(preg_match('#[0-9][a-zA-Z ]#', $_POST["adresse"])){
         session_start();
         $_SESSION["tablettes"] = $_POST["tablettes"];
         $_SESSION["pc"] = $_POST["pc"];
         $_SESSION["portable"] = $_POST["portable"];
-        $_SESSION["address"] = $_POST["address"];
+        $_SESSION["adresse"] = $_POST["adresse"];
         header("location:./src/validation_commande.php");
       }else{
         print "<p class=\"warning\">Il manque votre adresse de livraison</p>";
@@ -53,7 +53,7 @@
       </tr>
       <tr>
         <td><label for="adresse">Adresse</label></td>
-        <td><input type="text" name="address" id="adresse" placeholder="Adresse"></td>
+        <td><input type="text" name="adresse" id="adresse" placeholder="Adresse"></td>
       </tr>
       <tfoot>
         <tr>
