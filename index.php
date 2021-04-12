@@ -15,7 +15,7 @@
 #address
   if(isset($_POST["send"])){
     if(!empty($_POST["tablettes"]) && !empty($_POST["pc"]) && !empty($_POST["portable"])){
-      if(!empty($_POST["address"]) && preg_match('#[0-9]#', $_POST["address"])){
+      if(preg_match('#[0-9][a-z][A-Z]#', $_POST["address"])){
         session_start();
         $_SESSION["tablettes"] = $_POST["tablettes"];
         $_SESSION["pc"] = $_POST["pc"];
